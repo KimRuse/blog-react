@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import header from '../../statics/header.jpg';
 
+export const HeaderTop = styled.div`
+  position: relative;
+  height: 170px;
+`;
+
 export const HeaderWrapper = styled.div`
   z-index: -1;
   width: 100%; height: 170px;

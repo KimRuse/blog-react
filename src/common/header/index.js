@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { actionCreator } from './store';
 import { CSSTransition } from 'react-transition-group';
 import {
+  HeaderTop,
   HeaderWrapper,
   HeaderNav,
   Nav,
@@ -14,8 +15,6 @@ import {
   SearchInfoList,
   SearchInfoItem,
   SearchInfoSwitch,
-  Addition,
-  Button,
   Search
  } from './style';
 
@@ -54,7 +53,7 @@ const Header = (props) => {
     }
   }
   return (
-    <div>
+    <HeaderTop>
       <HeaderWrapper />
       <HeaderNav>
         <Nav>
@@ -77,7 +76,7 @@ const Header = (props) => {
           </Search>
         </Nav>
       </HeaderNav>
-    </div>
+    </HeaderTop>
   )
 }
 
