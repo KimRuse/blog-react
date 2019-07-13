@@ -1,20 +1,20 @@
 import styled from 'styled-components';
-import header from '../../statics/header.jpg';
+import header from '../../statics/header-bg.png';
 
 export const HeaderTop = styled.div`
   position: relative;
-  height: 170px;
+  height: 100px;
 `;
 
 export const HeaderWrapper = styled.div`
   z-index: -1;
-  width: 100%; height: 170px;
-  background: url(${header});
+  width: 100%; height: 100px;
+  background: url(${header}) #362f2b bottom left repeat-x;
 `;
 
 export const HeaderNav = styled.div`
   position: relative;
-  top: -160px; left: 10%;
+  top: -90px; left: 10%;
   width: 80%; height: 56px;
   border-radius: 20px;
   background: hsla(0,0%,100%,.4);
@@ -43,20 +43,20 @@ export const Navitem = styled.div`
   line-height: 56px;
   padding: 0 15px;
   font-size: 17px;
-  color: #333;
+  color: #FFE8C0;
   cursor: pointer;
   &.left {
     float: left;
   }
   &.right {
     float: right;
-    color: #333333;
+    color: #FFE8C0;
   }
   &:hover {
     background-color: hsla(0,0%,100%,.3);
   }
   &.active {
-    color: #333333;
+    color: #FFE8C0;
   }
 `;
 
@@ -174,6 +174,7 @@ export const Search = styled.div`
     right: 4px;
     bottom: 4px;
     width: 30px;
+    font-size: 22px;
     line-height: 30px;
     text-align: center;
     border-radius: 15px;

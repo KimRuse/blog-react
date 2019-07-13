@@ -60,7 +60,7 @@ const Header = (props) => {
           <Navitem className='left active'>首页</Navitem>
           <Navitem className='left'>文章</Navitem>
           <Navitem className='right'>Aa</Navitem>
-          <Navitem className='right'>登录</Navitem>
+          <Navitem className='right'>登录 | 注册</Navitem>
           <Search>
             <CSSTransition classNames='slide' in={props.focus} timeout={200}>
               <NavSearch
@@ -69,7 +69,7 @@ const Header = (props) => {
                 onBlur={props.handleInputBlur}
               ></NavSearch>
             </CSSTransition>
-            <i className={props.focus ? 'iconfont focused search' : 'iconfont search'}>&#xe616;</i>
+            <i className={props.focus ? 'iconfont focused search' : 'iconfont search'}>&#xe751;</i>
             { 
               getListArea(props.focus, props.mouse_in, props.list)
             }
