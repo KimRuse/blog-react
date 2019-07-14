@@ -18,7 +18,10 @@ import {
   Search
  } from './style';
 
+const rotate = {deg: '0deg'};
+
 const Header = (props) => {
+  console.log(rotate.deg);
   const getListArea = (show, mouse, data) => {
     
     const per_data = [];
@@ -37,7 +40,7 @@ const Header = (props) => {
           >
             <SearchInfoTitle>
               相关搜索
-              <SearchInfoSwitch onClick={()=>props.handleChange(props)}>
+              <SearchInfoSwitch onClick={()=>props.handleChange(props, rotate)} transform={rotate.deg}>
               <i className="iconfont spin">&#xe851;</i>
               <span>换一换</span>
               </SearchInfoSwitch>
@@ -52,6 +55,7 @@ const Header = (props) => {
       return null;
     }
   }
+
   return (
     <HeaderTop>
       <HeaderWrapper />
@@ -109,7 +113,8 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actionCreator.mouseOut());
     },
 
-    handleChange(props, rotateMeth) {
+    handleChange(props, rotate) {
+      rotate.deg = (+rotate.deg.match(/\d+/) + 180) + 'deg';
       if(props.page < props.totalpage) {
         dispatch(actionCreator.searchChange())
       } else {

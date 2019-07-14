@@ -128,9 +128,9 @@ export const SearchInfoSwitch = styled.span`
   }
   .spin {
     display: inline-block;
-    font-size: 12px;
-    transition: all 5s ease;
-    transform: rotate();
+    font-size: 14px;
+    transition: all .4s ease;
+    transform: rotate(${props => props.transform});
     transform-origin: center center; 
   }
 `;
