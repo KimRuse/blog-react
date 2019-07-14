@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { HomeMiddleTop, HomeMiddleBottom, HomeMBItem, HomeContent, HomeItemBottom, HomeItemLeft
+import { fromJS } from 'immutable';
+import axios from 'axios';
+import { HomeMiddleTop, HomeMiddleBottom, HomeMBItem, HomeContent, HomeItemBottom, HomeItemLeft, LoadMore
 } from '../style';
 
 class HomeMiddle extends Component {
@@ -11,7 +13,7 @@ class HomeMiddle extends Component {
               <HomeMiddleBottom key={data.id}>
                 <HomeMBItem>
                   <div>
-                    <HomeItemLeft />
+                    <HomeItemLeft background={data.imgUrl} />
                     <div className='content-title'>
                       <h4>{data.title}</h4>
                     </div>
@@ -40,15 +42,34 @@ class HomeMiddle extends Component {
       {
         this.putData(this.props.data, this.props.see)
       }
+      <LoadMore onClick={() => this.props.handleLoadMore(this.props.loadPage)}>加载更多</LoadMore>
       </div>
+      
     )
   }
 }
 
 const mapState = (state) => (
   {
-    data: state.getIn(['home', 'tab_list'])
+    data: state.getIn(['home', 'tab_list']),
+    loadPage: state.getIn(['home', 'loadPage'])
   }
 )
 
-export default connect(mapState, null)(HomeMiddle);
+const mapDispatch = (dispatch) => (
+  {
+    handleLoadMore(loadPage) {
+      axios.get('/api/homeLoadMore.json?id='+ loadPage).then((res)=>{
+        const data = res.data.data.qianduan;
+        const action = {
+          type: 'HOME_LIST_ADD',
+          data: fromJS(data),
+          loadPage: ++loadPage
+        }
+        dispatch(action);
+      } )
+    }
+  }
+)
+
+export default connect(mapState, mapDispatch)(HomeMiddle);

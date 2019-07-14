@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import item_img from '../../statics/articlex.png';
 
 export const HomeWrapper = styled.div`
   margin: 0 auto;
@@ -43,6 +42,9 @@ export const BackTop = styled.div `
   background: #239928;
   color: #fff;
   font-weight: 600px;
+  &:hover {
+    background: rgba(191,214,87,0.8);
+  }
 `;
 
 export const HomeLeftTop = styled.div `
@@ -118,6 +120,21 @@ export const HomeMiddleBottom = styled.div `
   cursor: pointer;
 `;
 
+export const LoadMore = styled.div `
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #239928;
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  margin: 30px 0;
+  &:hover {
+    cursor: pointer;
+    background: rgba(191,214,87,0.8); 
+  }
+`;
+
 export const HomeContent = styled.div `
   margin-bottom: 15px;
   overflow: hidden;
@@ -168,7 +185,7 @@ export const HomeItemLeft = styled.div `
   float: right;
   margin-left: 30px;
   margin-top: 10px;
-  background: url(${item_img});
+  background: url(${props => props.background});
   background-size: cover;
   background-position: center;
   

@@ -66,13 +66,13 @@ const mapDispatch = (dispatch) => (
     },
     showBack() {
       if(document.documentElement.scrollTop > 50) {
-         var action = {
+         let action = {
            type: 'CHANGE_BACK',
            show_back: true
          }
         dispatch(action)
       } else {
-        var action = {
+        let action = {
           type: 'CHANGE_BACK',
           show_back: false
         }

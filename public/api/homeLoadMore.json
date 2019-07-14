@@ -2,15 +2,15 @@
   "data": {
     "qianduan": [
       {
-        "id": 1,
+        "id": 8,
         "title": "TypeScript基础类型与联合类型",
         "content": "TypeScript对它的学习其实是在前年就开始了，后面一直没有机会在项目中使用，直到最近我司开发小程序，使用京东的taro才算真正了。使用的过程中，发现对其基本知识点并没有通透，所以才想到要记录学习的过程。",
         "author": "KimRuse",
         "imgUrl": "https://image-static.segmentfault.com/268/033/2680332610-5d2a0812e4eeb_articlex",
-        "zan": 4
+        "zan": 2
       },
       {
-        "id": 2,
+        "id": 9,
         "title": "一段代码，带你理解js执行上下文的工作流程",
         "content": "我相信很多前端初学者一开始都会被执行上下文这个概念弄晕，或者说似懂非懂。对于工作两年的我来说，说来实在惭愧，虽然知道它大概是什么，但总觉得没有一个更为清晰的认识（无法把它的工作过程描述清楚），因此...",
         "author": "KimRuse",
@@ -18,44 +18,44 @@
         "zan": 6
       },
       {
-        "id": 3,
+        "id": 10,
         "title": "JavaScript设计模式（七）：命令模式",
         "content": "命令模式：请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。",
         "author": "KimRuse",
         "imgUrl": "https://image-static.segmentfault.com/250/676/2506766979-5d296522f01b7_articlex",
-        "zan": 5
+        "zan": 2
       },
       {
-        "id": 4,
+        "id": 11,
         "title": "Golang 大杀器之跟踪剖析 trace",
         "content": "在 Go 中有许许多多的分析工具，在之前我有写过一篇 《Golang 大杀器之性能剖析 PProf》 来介绍 PProf，如果有小伙伴感兴趣可以去我博客看看.",
         "author": "KimRuse",
         "imgUrl": "https://image.eddycjy.com/df9f333424ff6cc6164ce421b019fb94.png",
-        "zan": 6
+        "zan": 2
       },
       {
-        "id": 5,
+        "id": 12,
         "title": "MakerDAO 万字深度报告：揭示以太坊最大稳定币的价值所在及启示意义",
         "content": "近期，秘猿科技研究院对 MakerDAO 项目进行了深入研究，本文是基于研究成果，撰写而成的《MakerDAO深度报告》。该报告分为四个章节，分别向读者阐述了以下四个部分，即： ​ 稳定币的存在意义 MakerDAO 的研究价值",
         "author": "KimRuse",
         "imgUrl": "https://image-static.segmentfault.com/522/442/522442697-5d26d40a06282_articlex",
-        "zan": 7
+        "zan": 2
       },
       {
-        "id": 6,
+        "id": 13,
         "title": "Flutter 1.7 正式版发布",
         "content": "今天，我们非常高兴地向大家宣布又一个正式版本的发布 —— Flutter 1.7，这是继上次 I/O 时众多重要功能发布以来的一次小更新。Flutter 1.7 包含了对 AndroidX 的支持，满足了 Play 商店近期对应用提出的要求，包",
         "author": "KimRuse",
         "imgUrl": "https://files.flutter-io.cn/posts/flutter-cn/2019/flutter-1dot7-release/announcing-1-7.png",
-        "zan": 9
+        "zan": 2
       },
       {
-        "id": 7,
+        "id": 14,
         "title": "一套基础自动化部署搭建过程",
         "content": "公司初创技术团队，没有任何基础设施的情况下，需要搭建一系列code管理以及自动化部署等工具....所以引发了下面一系列的部署过程，历时两天，中间也是碰到各种问题，但最终把基本工具全部搭建成功，耶~，下面带大",
         "author": "KimRuse",
         "imgUrl": "https://image-static.segmentfault.com/390/401/3904013863-5b8cf9a1dea57_articlex",
-        "zan": 10
+        "zan": 2
       }
     ]
   }
