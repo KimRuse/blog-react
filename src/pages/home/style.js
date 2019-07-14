@@ -32,6 +32,19 @@ export const HomeWrapper = styled.div`
   }
 `;
 
+export const BackTop = styled.div `
+  cursor: pointer;
+  position: fixed;
+  text-align: center;
+  right: 80px; bottom: 80px;
+  line-height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background: #239928;
+  color: #fff;
+  font-weight: 600px;
+`;
+
 export const HomeLeftTop = styled.div `
   margin-bottom: 15px;
   a {
@@ -72,6 +85,10 @@ export const HomeLeftBottom = styled.div `
     padding-left: 10px;
     color: #362f2b;
     text-decoration: none;
+    &:hover {
+      outline: 0;
+      background: rgba(191,214,87,0.4);
+    }
     &.active {
       outline: 0;
       color: white;
@@ -98,6 +115,7 @@ export const HomeMiddleTop = styled.div `
 
 export const HomeMiddleBottom = styled.div `
   border-bottom: 1px solid #362f2b;
+  cursor: pointer;
 `;
 
 export const HomeContent = styled.div `
@@ -174,5 +192,96 @@ export const HomeMBItem = styled.div `
     h4 {
       font-size: 18px;
     }
+  }
+`;
+
+export const HomeRightSlick = styled.div `
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(191,214,87,0.4);
+  .slick-list {
+    border-radius: 8px;
+  }
+  .slick-prev {
+    &:before {
+      color: rgba(191,214,87,1);
+    }
+    left: 170px;
+    top: -16px;
+  }
+  .slick-next {
+    &:before {
+      color: rgba(191,214,87,1);
+    }
+    left: 200px;
+    top: -16px;
+  }
+`;
+
+export const HomeRightLog = styled.div `
+  margin-top: 20px;
+  .top {
+    overflow: hidden;
+  }
+  .r-header {
+    float:left;
+  }
+  .more { 
+    cursor: pointer;
+    display: block;
+    float: right;
+    &:hover {
+      color: #239928;
+      text-decoration: none;
+    }
+  }
+`;
+
+export const HomeLogItem = styled.a `
+  display: block;
+  overflow: hidden;
+  padding: 10px 0 16px 0;
+  border-bottom: 1px dashed #362f2b;
+`;
+
+export const HomeLogItemR = styled.div `
+  height: 30px;
+  margin-left: 40px;
+  .content {
+    text-overflow: ellipsis;
+    color: #212121;
+    height: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .content-bottom {
+    color: #999;
+  }
+`;
+
+export const HomeLogItemL = styled.div `
+  float: left;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-right: 10px;
+  text-align: center;
+  width: 32px;
+  height: 34px;
+  border-radius: 4px;
+  color: #362f2b;
+  .data-up {
+    width: 32px;
+    background: #239928;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .data-down {
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 2px;
+    background: rgba(191,214,87,0.4);
+    font-weight: 500;
   }
 `;

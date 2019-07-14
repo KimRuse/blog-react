@@ -27,7 +27,7 @@ const Header = (props) => {
         per_data.push(<SearchInfoItem key={data[i]}>{data[i]}</SearchInfoItem>)
       }
     }
-
+    
     if(show || mouse) {
       return (
         <Info>
@@ -39,7 +39,7 @@ const Header = (props) => {
               相关搜索
               <SearchInfoSwitch onClick={()=>props.handleChange(props)}>
               <i className="iconfont spin">&#xe851;</i>
-              换一换
+              <span>换一换</span>
               </SearchInfoSwitch>
             </SearchInfoTitle>
             <SearchInfoList>
@@ -109,7 +109,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actionCreator.mouseOut());
     },
 
-    handleChange(props) {
+    handleChange(props, rotateMeth) {
       if(props.page < props.totalpage) {
         dispatch(actionCreator.searchChange())
       } else {

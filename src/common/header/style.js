@@ -123,11 +123,15 @@ export const SearchInfoSwitch = styled.span`
   cursor: pointer;
   float: right;
   font-size: 14px;
+  span {
+    margin-left: 4px;
+  }
   .spin {
+    display: inline-block;
     font-size: 12px;
-    margin-right: 2px;
-    transition: all .5s ease;
-    transform-origin: center center;
+    transition: all 5s ease;
+    transform: rotate();
+    transform-origin: center center; 
   }
 `;
 

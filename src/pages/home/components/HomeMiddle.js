@@ -5,8 +5,9 @@ import { HomeMiddleTop, HomeMiddleBottom, HomeMBItem, HomeContent, HomeItemBotto
 
 class HomeMiddle extends Component {
   putData(data) {
-    if (data.size === undefined){
-      return data.qianduan.map((data)=> (
+    var datas = data.toJS().qianduan
+    if (datas) {
+      return datas.map((data)=> (
               <HomeMiddleBottom key={data.id}>
                 <HomeMBItem>
                   <div>
@@ -37,7 +38,7 @@ class HomeMiddle extends Component {
         <h5>前端</h5>
       </HomeMiddleTop>
       {
-        this.putData(this.props.data)
+        this.putData(this.props.data, this.props.see)
       }
       </div>
     )
