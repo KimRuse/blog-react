@@ -6,6 +6,7 @@ const defaultState = fromJS({
   list: [],
   page: 1,
   totalpage: 1,
+  show_data: 0,
   mouse_in: false
 });
 
@@ -28,6 +29,8 @@ export default (state = defaultState, action) => {
       return state.set('mouse_in', true);
     case actionType.MOUSE_OUT :
       return state.set('mouse_in', false);
+    case 'CHANGE_SHOW_DATA' :
+      return state.set('show_data', state.get('show_data')+1);
     default :
       return state;
   };

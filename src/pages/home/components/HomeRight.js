@@ -47,9 +47,9 @@ class HomeRight extends Component {
         <HomeRightSlick>
           <h4 style={{marginBottom: '10px'}}>内容推荐</h4>
           <Slider {...setting} >
-            <img src={'https://i1.hdslb.com/bfs/archive/ae3cfc60968e669d52df092bb7f0305aedc92d12.jpg@203w_127h_1e_1c.webp'} />
-            <img src={'https://i0.hdslb.com/bfs/archive/f6568f3ce5a7052e7b4d8ee62c7855617b1280e0.jpg@203w_127h_1e_1c.webp'} />
-            <img src={'https://i0.hdslb.com/bfs/archive/7f569970620ac99e69f85bbed7b46eaba09b0315.jpg@203w_127h_1e_1c.webp'} />
+            <img src={'https://i0.hdslb.com/bfs/live/4912521.jpg@.webp?07152315'} />
+            <img src={'https://i0.hdslb.com/bfs/live/21000787.jpg@.webp?07151926'} />
+            <img src={'https://i0.hdslb.com/bfs/live/250808.jpg@.webp?07151925'} />
           </Slider>
         </HomeRightSlick>
         <HomeRightLog>

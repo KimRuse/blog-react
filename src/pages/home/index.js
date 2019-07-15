@@ -19,9 +19,13 @@ class Home extends Component {
         <HomeLeft />
         <HomeMiddle />
         <HomeRight />
-        {this.props.show_back ? <BackTop onClick={this.handleBackTo}>TOP</BackTop> : null} 
+        {this.props.show_back ? <BackTop onClick={this.handleBackTo}>TOP</BackTop> : null}
       </HomeWrapper>
     )
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener();
   }
 
   componentDidMount() {

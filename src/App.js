@@ -19,7 +19,7 @@ function App() {
               <Route path='/' exact component={Home}></Route>
               <Route path='/detail' exact component={Detail}></Route>
             </div>
-          </Router>  
+          </Router> 
         </Provider>  
       </Fragment>  
     </div>

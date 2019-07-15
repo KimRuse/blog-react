@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { actionCreator } from './store';
 import { CSSTransition } from 'react-transition-group';
+import Login from '../../pages/login';
 import {
   HeaderTop,
   HeaderWrapper,
@@ -21,7 +22,6 @@ import {
 const rotate = {deg: '0deg'};
 
 const Header = (props) => {
-  console.log(rotate.deg);
   const getListArea = (show, mouse, data) => {
     
     const per_data = [];
@@ -64,7 +64,7 @@ const Header = (props) => {
           <Navitem className='left active'>首页</Navitem>
           <Navitem className='left'>文章</Navitem>
           <Navitem className='right'>Aa</Navitem>
-          <Navitem className='right'>登录 | 注册</Navitem>
+          <Navitem className='right' onClick={props.handleShowLogin}>登录</Navitem>
           <Search>
             <CSSTransition classNames='slide' in={props.focus} timeout={200}>
               <NavSearch
@@ -80,6 +80,7 @@ const Header = (props) => {
           </Search>
         </Nav>
       </HeaderNav>
+      <Login showData={props.show_data} />
     </HeaderTop>
   )
 }
@@ -90,7 +91,8 @@ const mapStateToProps = (state) => {
     list: state.getIn(['header', 'list']),
     page: state.getIn(['header', 'page']),
     totalpage: state.getIn(['header', 'totalpage']),
-    mouse_in: state.getIn(['header', 'mouse_in'])
+    mouse_in: state.getIn(['header', 'mouse_in']),
+    show_data: state.getIn(['header', 'show_data'])
   }
 }
 
@@ -114,12 +116,19 @@ const mapDispatchToProps = (dispatch) => {
     },
 
     handleChange(props, rotate) {
-      rotate.deg = (+rotate.deg.match(/\d+/) + 180) + 'deg';
+      rotate.deg = (+rotate.deg.match(/\d+/) + 360) + 'deg';
       if(props.page < props.totalpage) {
         dispatch(actionCreator.searchChange())
       } else {
         dispatch(actionCreator.searchRefresh())
       }
+    },
+
+    handleShowLogin() {
+      const action = {
+        type: 'CHANGE_SHOW_DATA'
+      }
+      dispatch(action);  
     }
   }
 }

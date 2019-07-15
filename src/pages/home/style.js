@@ -272,6 +272,11 @@ export const HomeLogItemR = styled.div `
     font-weight: 500;
     font-size: 14px;
     margin-bottom: 4px;
+    &:hover {
+      cursor: pointer;
+      color: #239928;
+      text-decoration: underline;
+    }
   }
   .content-bottom {
     color: #999;
